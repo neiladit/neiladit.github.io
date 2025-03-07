@@ -16,7 +16,7 @@ Outside academia, I enjoy playing tennis, pickle ball, hiking, running and weigh
 
 ## Updates
 
-- I am serving on the Program Committee for [ISCA 2025](https://iscaconf.org/isca2025/), and [ASPLOS 2026](https://www.asplos-conference.org/asplos2026/). [Jan, 2025]
+- I am serving on the Program Committee for [ISCA 2025](https://www.iscaconf.org/isca2025/committees/pc.php), and [ASPLOS 2026](https://www.asplos-conference.org/asplos2026/). [Jan, 2025]
 - I joined Meta as a Research Scientist in Menlo Park, CA. [July, 2024]
 - I defended my PhD thesis, [Software-Oriented Hardware Prefetching and Vector Execution]({{ site.url }}/docs/Neil_PhD_thesis.pdf). [June, 2024]
 - I am continuing working at Google as a Student Researcher, with [Akanksha Jain](https://www.cs.utexas.edu/~akanksha/) and [Snehasish Kumar](https://snehasish.net/). [Sep, 2022]
