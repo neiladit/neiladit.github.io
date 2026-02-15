@@ -61,9 +61,63 @@ There was 2 directions at this point, since scalar computation was scaling so fa
 
 Tarantula: Attaches a 16-lane vector engine to a scalar core and bypasses L1 cache to connect to L2 for higher bandwidth. 
 
-Cray Black Widow: Vector processor 
+Cray Black Widow: Vector processor
 
 Packed SIMD
+
+Packed-SIMD (also called short-vector SIMD) tightly couples vector lanes with the scalar core. Each vector register maps directly to lanes that execute in parallel on the same instruction stream — this is the ISA-level model used by x86 SSE/AVX and ARM NEON. Packed-SIMD is a good fit when:
+
+- The data-parallel work fits in short vectors (e.g. 4, 8, 16 elements).
+- The control flow is uniform or can be predicated/packed efficiently.
+
+Advantages of packed SIMD:
+
+- Low control overhead because lanes follow the scalar core's instruction stream.
+- Very efficient for compute-bound inner loops (dense linear algebra, multimedia).
+
+Limitations:
+
+- Fixed, relatively small vector width limits the per-instruction parallelism.
+- Handling irregular memory patterns is harder — gather/scatter support is recent.
+
+SIMT and GPUs
+
+SIMT (Single Instruction Multiple Threads) is the execution model most GPUs use — logically similar to SIMD but implemented as many lightweight threads grouped into warps/wavefronts. Differences from classic SIMD:
+
+- SIMT exposes per-thread control (threads can diverge), but divergence is typically serialized within a warp.
+- GPUs provide very wide parallelism (thousands of threads) with many vector lanes and deep multithreading to hide memory latency.
+
+GPUs also couple wide vectorization with explicit memory hierarchy and high memory bandwidth, making them ideal for massively data-parallel workloads where throughput is more important than single-thread latency.
+
+Vectorization in compilers and runtimes
+
+Modern compilers try to auto-vectorize loops where possible: they perform dependence analysis, alignment checks, and loop transformations (unrolling, strip-mining) to convert scalar loops into vector instructions. When auto-vectorization is not possible, developers use intrinsics or libraries to express packed-SIMD operations directly.
+
+Practical considerations
+
+- Memory bandwidth and locality: Vector units are starved without sufficient memory bandwidth. Streamlined memory accesses (contiguous/strided) and prefetching improve utilization.
+- Alignment: Aligned loads/stores are faster; when alignment can't be guaranteed, compilers emit peel/trailer code or use masked loads.
+- Masking & predication: Support for selective lane execution avoids expensive branches and is essential for irregular control.
+- Gather/Scatter: Useful for indirect/irregular accesses, but often slower than contiguous loads — design algorithms to minimize their use or hide latency.
+- Chaining and latency hiding: Chaining (forwarding intermediate results) and deep multithreading (GPUs) help keep functional units busy despite long vector lengths.
+
+When to use vectorization
+
+- Use vectorization for data-parallel kernels (linear algebra, image processing, signal processing, many ML primitives).
+- Prefer packed-SIMD for short, highly-optimized kernels on CPUs; prefer wide SIMT-style parallelism on GPUs for throughput-oriented tasks.
+
+Closing thoughts
+
+Vector architectures are a powerful abstraction for expressing data parallelism. Over time the design space has shifted from very long, memory-to-memory vector machines to flexible packed-SIMD and wide-SIMT models that balance control, memory, and compute. Understanding the tradeoffs — vector length, coupling with scalar cores, memory bandwidth, and control mechanisms like masking — helps you pick the right platform and algorithm strategy.
+
+Further reading
+
+- Patterson & Hennessy, Computer Architecture: A Quantitative Approach (for historic machines like Cray)
+- Research papers on TI-ASC and STAR-100 (early memory-to-memory designs)
+- Documentation and ISA guides for x86 AVX/AVX-512 and ARM SVE/NEON for packed-SIMD details
+
+---
+
 
 
 
