@@ -6,7 +6,7 @@ layout: default
 
 ## About
 
-Hello! I'm a Research Scientist at Meta, in the AI recommendation system co-design group. I graduated with a PhD from Cornell University, surrounded by brilliant folks at the Computer Systems Lab ([CSL](http://www.csl.cornell.edu)). I worked with [Prof. Adrian Sampson](https://www.cs.cornell.edu/~asampson/) in the [CAPRA](https://capra.cs.cornell.edu) research group. My research spanned efficient machine learning, vector architectures and compilers.
+Hello! I'm a Research Scientist at Meta, in the AI recommendation system co-design group. I work on designing efficient foundation models and use quantization/sparsity techniques to further accelerate training and inference performance. I graduated with a PhD from Cornell University, surrounded by brilliant folks at the Computer Systems Lab ([CSL](http://www.csl.cornell.edu)). I worked with [Prof. Adrian Sampson](https://www.cs.cornell.edu/~asampson/) in the [CAPRA](https://capra.cs.cornell.edu) research group. My research spanned efficient machine learning, vector architectures and compilers.
 
 I completed my Bachelor's and Master's degree in ECE from [IIT Bombay](http://www.iitb.ac.in) in 2018. I worked with [Prof. Sachin Patkar](https://www.ee.iitb.ac.in/wiki/faculty/patkar) on Accelerating Sparse Matrix Solvers on FPGA for my thesis.
 
