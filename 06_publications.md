@@ -9,6 +9,10 @@ Full list of updated publications is available on [Google Scholar](https://schol
 
 ### Conference, Journals and Preprints
 
+[Themis: Software-Defined Hardware Prefetching](https://arxiv.org/abs/2608.00259)\\
+Keisuke Kamahori, <u>Neil Adit</u>, Kan Zhu, Yuqi Mai, Victor Lee, Heiner Litz, Chris Kennelly, Snehasish Kumar, Hanna Alam, Milad Hashemi, David Li, Adrian Sampson, Baris Kasikci, Tipp Moseley, Parthasarathy Ranganathan, Akanksha Jain\\
+<i>arXiv preprint 2026</i>
+
 [Performance left on the table: an evaluation of compiler autovectorization for RISC-V]({{ site.url }}/papers/Performance_Left_on_the_Table_An_Evaluation_of_Compiler_Autovectorization_for_RISC-V.pdf)\\
 <u>Neil Adit</u>, Adrian Sampson\\
 <i>IEEE Micro 2022</i>

@@ -6,7 +6,7 @@ layout: default
 
 ## About
 
-Hello! I'm a Research Scientist at Meta, in the AI recommendation system co-design group. I work on designing efficient foundation models and use quantization/sparsity techniques to further accelerate training and inference performance. I graduated with a PhD from Cornell University, surrounded by brilliant folks at the Computer Systems Lab ([CSL](http://www.csl.cornell.edu)). I worked with [Prof. Adrian Sampson](https://www.cs.cornell.edu/~asampson/) in the [CAPRA](https://capra.cs.cornell.edu) research group. My research spanned efficient machine learning, vector architectures and compilers.
+Hello! I'm a ML Researcher at MatX, working on training efficient LLM architectures (attention, MoEs, quantization) co-designed for our custom chip. Previously, I was a Research Scientist at Meta in the AI recommendation system co-design group, where I worked on designing efficient foundation models and used quantization/sparsity techniques to further accelerate training and inference performance. I graduated with a PhD from Cornell University, surrounded by brilliant folks at the Computer Systems Lab ([CSL](http://www.csl.cornell.edu)). I worked with [Prof. Adrian Sampson](https://www.cs.cornell.edu/~asampson/) in the [CAPRA](https://capra.cs.cornell.edu) research group. My research spanned efficient machine learning, vector architectures and compilers.
 
 I completed my Bachelor's and Master's degree in ECE from [IIT Bombay](http://www.iitb.ac.in) in 2018. I worked with [Prof. Sachin Patkar](https://www.ee.iitb.ac.in/wiki/faculty/patkar) on Accelerating Sparse Matrix Solvers on FPGA for my thesis.
 
@@ -16,6 +16,7 @@ Outside academia, I enjoy playing tennis, pickle ball, hiking, running and weigh
 
 ## Updates
 
+- I joined MatX as an ML Researcher in Mountain View, CA. [May, 2026]
 - I am serving on the Program Committee for [ISCA 2025](https://www.iscaconf.org/isca2025/committees/pc.php), and [ASPLOS 2026](https://www.asplos-conference.org/asplos2026/). [Jan, 2025]
 - I joined Meta as a Research Scientist in Menlo Park, CA. [July, 2024]
 - I defended my PhD thesis, [Software-Oriented Hardware Prefetching and Vector Execution]({{ site.url }}/docs/Neil_PhD_thesis.pdf). [June, 2024]
